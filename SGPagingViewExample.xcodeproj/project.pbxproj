@@ -60,6 +60,7 @@
 		8DCB02AA1F95B0FF00C9598A /* SGPageTitleViewConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB02A91F95B0FF00C9598A /* SGPageTitleViewConfigure.m */; };
 		8DF628F720A94CBA00B7B85A /* DefaultSystemVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF628F620A94CBA00B7B85A /* DefaultSystemVC.m */; };
 		9A3EDE201FF4C5C600DC1EB2 /* DefaultDynamicVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A3EDE1F1FF4C5C600DC1EB2 /* DefaultDynamicVC.m */; };
+		E3737AAA22408BA10057C500 /* SGScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3737AA922408BA10057C500 /* SGScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,6 +181,8 @@
 		8DF628F620A94CBA00B7B85A /* DefaultSystemVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefaultSystemVC.m; sourceTree = "<group>"; };
 		9A3EDE1E1FF4C5C600DC1EB2 /* DefaultDynamicVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultDynamicVC.h; sourceTree = "<group>"; };
 		9A3EDE1F1FF4C5C600DC1EB2 /* DefaultDynamicVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefaultDynamicVC.m; sourceTree = "<group>"; };
+		E3737AA822408BA10057C500 /* SGScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGScrollView.h; sourceTree = "<group>"; };
+		E3737AA922408BA10057C500 /* SGScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,6 +333,8 @@
 				8DA4303F20BBE3D500C47917 /* SGPageContentCollectionView.m */,
 				182513DF1F21D1600039F4A2 /* SGPageContentScrollView.h */,
 				182513E01F21D1600039F4A2 /* SGPageContentScrollView.m */,
+				E3737AA822408BA10057C500 /* SGScrollView.h */,
+				E3737AA922408BA10057C500 /* SGScrollView.m */,
 			);
 			path = SGPageContent;
 			sourceTree = "<group>";
@@ -500,6 +505,7 @@
 				TargetAttributes = {
 					1825133F1F21CAC30039F4A2 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = BS844V37YG;
 						ProvisioningStyle = Automatic;
 					};
 					182513581F21CAC30039F4A2 = {
@@ -590,6 +596,7 @@
 				8D0F8E371FD95DE300F30426 /* DefaultStaticVC.m in Sources */,
 				182513D21F21CC340039F4A2 /* NavigationBarVC.m in Sources */,
 				8DCB02AA1F95B0FF00C9598A /* SGPageTitleViewConfigure.m in Sources */,
+				E3737AAA22408BA10057C500 /* SGScrollView.m in Sources */,
 				8D0F8E3A1FD95DE300F30426 /* DefaultZoomVC.m in Sources */,
 				182513D31F21CC340039F4A2 /* NavigationBarTitleView.m in Sources */,
 				8D0F8E341FD95DE300F30426 /* DefaultPopGestureVC.m in Sources */,
@@ -780,7 +787,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = BS844V37YG;
 				INFOPLIST_FILE = SGPagingViewExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SGPagingViewExample;
@@ -795,7 +802,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = BS844V37YG;
 				INFOPLIST_FILE = SGPagingViewExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SGPagingViewExample;

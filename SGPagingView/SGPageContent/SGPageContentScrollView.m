@@ -8,6 +8,7 @@
 
 #import "SGPageContentScrollView.h"
 #import "UIView+SGPagingView.h"
+#import "SGScrollView.h"
 
 @interface SGPageContentScrollView () <UIScrollViewDelegate>
 // 外界父控制器
@@ -77,7 +78,7 @@
 
 - (UIScrollView *)scrollView {
     if (!_scrollView) {
-        _scrollView = [[UIScrollView alloc] init];
+        _scrollView = [[SGScrollView alloc] init];
         _scrollView.bounces = NO;
         _scrollView.delegate = self;
         _scrollView.pagingEnabled = YES;

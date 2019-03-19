@@ -81,13 +81,13 @@
     [self.pageTitleView setPageTitleViewWithProgress:progress originalIndex:originalIndex targetIndex:targetIndex];
 }
 
-- (void)pageContentScrollView:(SGPageContentScrollView *)pageContentScrollView index:(NSInteger)index {
-    if (index == 0) {
-        self.navigationController.interactivePopGestureRecognizer.enabled = YES;
-    } else {
-        self.navigationController.interactivePopGestureRecognizer.enabled = NO;
-    }
-}
+//- (void)pageContentScrollView:(SGPageContentScrollView *)pageContentScrollView index:(NSInteger)index {
+//    if (index == 0) {
+//        self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+//    } else {
+//        self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+//    }
+//}
 
 /*
 #pragma mark - Navigation
