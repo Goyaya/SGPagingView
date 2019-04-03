@@ -61,6 +61,7 @@
 		8DF628F720A94CBA00B7B85A /* DefaultSystemVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF628F620A94CBA00B7B85A /* DefaultSystemVC.m */; };
 		9A3EDE201FF4C5C600DC1EB2 /* DefaultDynamicVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A3EDE1F1FF4C5C600DC1EB2 /* DefaultDynamicVC.m */; };
 		E3737AAA22408BA10057C500 /* SGScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3737AA922408BA10057C500 /* SGScrollView.m */; };
+		E3D9E6792254DDA500650F99 /* SGPagingView.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E3D9E6782254DDA400650F99 /* SGPagingView.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -183,6 +184,7 @@
 		9A3EDE1F1FF4C5C600DC1EB2 /* DefaultDynamicVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefaultDynamicVC.m; sourceTree = "<group>"; };
 		E3737AA822408BA10057C500 /* SGScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGScrollView.h; sourceTree = "<group>"; };
 		E3737AA922408BA10057C500 /* SGScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGScrollView.m; sourceTree = "<group>"; };
+		E3D9E6782254DDA400650F99 /* SGPagingView.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SGPagingView.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 		182513371F21CAC30039F4A2 = {
 			isa = PBXGroup;
 			children = (
+				E3D9E6782254DDA400650F99 /* SGPagingView.podspec */,
 				182513DA1F21D1600039F4A2 /* SGPagingView */,
 				182513421F21CAC30039F4A2 /* SGPagingViewExample */,
 				1825135C1F21CAC30039F4A2 /* SGPagingViewExampleTests */,
@@ -525,6 +528,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -551,6 +555,7 @@
 				8D0F8E691FD95E2300F30426 /* ChildVCFour.xib in Resources */,
 				182513531F21CAC30039F4A2 /* LaunchScreen.storyboard in Resources */,
 				8D0F8E651FD95E2300F30426 /* ChildFourthPopGestureVC.xib in Resources */,
+				E3D9E6792254DDA500650F99 /* SGPagingView.podspec in Resources */,
 				182513501F21CAC30039F4A2 /* Assets.xcassets in Resources */,
 				8D0F8E601FD95E2300F30426 /* ChildFirstPopGestureNextVC.xib in Resources */,
 				1825134E1F21CAC30039F4A2 /* Main.storyboard in Resources */,
