@@ -94,7 +94,7 @@
 - (void)setupSubviews {
     // 0、处理偏移量
     UIView *tempView = [[UIView alloc] initWithFrame:CGRectZero];
-    [self addSubview:tempView];
+    [self.scrollView addSubview:tempView];
     // 1、添加 UIScrollView
     [self addSubview:self.scrollView];
     // 2、添加标题按钮
@@ -304,32 +304,17 @@
     // 所有按钮文字宽度 ＋ 所有按钮额外增加的宽度
     self.allBtnWidth = self.allBtnTextWidth + self.configure.titleAdditionalWidth * titleCount;
     self.allBtnWidth = ceilf(self.allBtnWidth);
-    if (self.allBtnWidth <= self.bounds.size.width) { // SGPageTitleView 静止样式
-        for (NSInteger index = 0; index < titleCount; index++) {
-            SGPageTitleButton *btn = [[SGPageTitleButton alloc] init];
-            btn.tag = index;
-            btn.titleLabel.font = self.configure.titleFont;
-            [btn setTitle:self.titleArr[index] forState:(UIControlStateNormal)];
-            [btn setTitleColor:self.configure.titleColor forState:(UIControlStateNormal)];
-            [btn setTitleColor:self.configure.titleSelectedColor forState:(UIControlStateSelected)];
-            [btn addTarget:self action:@selector(P_btn_action:) forControlEvents:(UIControlEventTouchUpInside)];
-            [self.btnMArr addObject:btn];
-            [self.scrollView addSubview:btn];
-        }
-
-    } else { // SGPageTitleView 滚动样式
-        for (NSInteger index = 0; index < titleCount; index++) {
-            // 1、添加按钮
-            SGPageTitleButton *btn = [[SGPageTitleButton alloc] init];
-            btn.tag = index;
-            btn.titleLabel.font = self.configure.titleFont;
-            [btn setTitle:self.titleArr[index] forState:(UIControlStateNormal)];
-            [btn setTitleColor:self.configure.titleColor forState:(UIControlStateNormal)];
-            [btn setTitleColor:self.configure.titleSelectedColor forState:(UIControlStateSelected)];
-            [btn addTarget:self action:@selector(P_btn_action:) forControlEvents:(UIControlEventTouchUpInside)];
-            [self.btnMArr addObject:btn];
-            [self.scrollView addSubview:btn];
-        }
+    
+    for (NSInteger index = 0; index < titleCount; index++) {
+        SGPageTitleButton *btn = [[SGPageTitleButton alloc] init];
+        btn.tag = index;
+        btn.titleLabel.font = self.configure.titleFont;
+        [btn setTitle:self.titleArr[index] forState:(UIControlStateNormal)];
+        [btn setTitleColor:self.configure.titleColor forState:(UIControlStateNormal)];
+        [btn setTitleColor:self.configure.titleSelectedColor forState:(UIControlStateSelected)];
+        [btn addTarget:self action:@selector(P_btn_action:) forControlEvents:(UIControlEventTouchUpInside)];
+        [self.btnMArr addObject:btn];
+        [self.scrollView addSubview:btn];
     }
     // 标题文字渐变效果下对标题文字默认、选中状态下颜色的记录
     if (self.configure.titleGradientEffect) {
@@ -353,7 +338,7 @@
     // 1、改变按钮的选择状态
     [self P_changeSelectedButton:button];
     // 2、标题滚动样式下选中标题居中处理
-    if (self.allBtnWidth > self.frame.size.width) {
+    if ([self _isSapceSufficient4TitleButtons] == NO) {
         _signBtnClick = YES;
         [self P_selectedBtnCenter:button];
     }
@@ -425,7 +410,7 @@
 #pragma mark - - - 标题滚动样式下选中标题居中处理
 - (void)P_selectedBtnCenter:(UIButton *)centerBtn {
     // 计算偏移量
-    CGFloat offsetX = centerBtn.center.x - self.frame.size.width * 0.5;
+    CGFloat offsetX = centerBtn.center.x - _scrollView.frame.size.width * 0.5;
     if (offsetX < 0) offsetX = 0;
     // 获取最大滚动范围
     CGFloat maxOffsetX = self.scrollView.contentSize.width - self.frame.size.width;
@@ -463,6 +448,14 @@
             self.indicatorView.SG_centerX = button.SG_centerX;
         }
     }];
+}
+
+#pragma mark - assist methods
+
+- (BOOL)_isSapceSufficient4TitleButtons {
+    CGFloat maxWidth = self.frame.size.width - _configure.contentInsets.left - _configure.contentInsets.right;
+    
+    return maxWidth >= _allBtnWidth;
 }
 
 #pragma mark - - - 给外界提供的方法
@@ -766,7 +759,7 @@
     }
     
     /// 处理指示器下划线、遮盖样式
-    CGFloat btnWidth = self.SG_width / self.titleArr.count;
+    CGFloat btnWidth = _scrollView.SG_width / self.titleArr.count;
     // 文字宽度
     CGFloat targetBtnTextWidth = [self P_sizeWithString:targetBtn.currentTitle font:self.configure.titleFont].width;
     CGFloat originalBtnTextWidth = [self P_sizeWithString:originalBtn.currentTitle font:self.configure.titleFont].width;
