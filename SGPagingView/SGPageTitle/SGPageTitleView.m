@@ -123,13 +123,14 @@
 #pragma mark - - - 布局子控制器的 frame
 - (void)P_layoutSubviews {
     CGFloat selfHeight = self.frame.size.height;
+    CGFloat contentMaxWidth = self.frame.size.width - _configure.contentInsets.left - _configure.contentInsets.right;
     // 1、布局 UIScrollView 的 frame
-    _scrollView.frame = CGRectMake(0, 0, self.frame.size.width, selfHeight);
+    _scrollView.frame = CGRectMake(_configure.contentInsets.left, 0, contentMaxWidth, selfHeight);
     // 2、布局标题按钮的 frame
     NSInteger titleCount = self.titleArr.count;
-    if (self.allBtnWidth <= self.bounds.size.width) { // SGPageTitleView 静止样式
+    if (self.allBtnWidth <= contentMaxWidth) { // SGPageTitleView 静止样式
         CGFloat btnY = 0;
-        CGFloat btnW = self.frame.size.width / titleCount;
+        CGFloat btnW = contentMaxWidth / titleCount;
         CGFloat btnH = 0;
         if (self.configure.indicatorStyle == SGIndicatorStyleDefault) {
             btnH = selfHeight - self.configure.indicatorHeight;

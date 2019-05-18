@@ -32,6 +32,9 @@ typedef enum : NSUInteger {
 /** 类方法创建 */
 + (instancetype)pageTitleViewConfigure;
 
+/// only left&right used
+@property (nonatomic, readwrite, assign) UIEdgeInsets contentInsets;
+
 #pragma mark - - SGPageTitleView 属性
 /** SGPageTitleView 是否需要弹性效果，默认为 YES */
 @property (nonatomic, assign) BOOL needBounces;

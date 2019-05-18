@@ -51,6 +51,7 @@
     configure.titleSelectedFont = [UIFont systemFontOfSize:16];
     configure.indicatorStyle = SGIndicatorStyleDefault;
     configure.bottomSeparatorColor = [UIColor redColor];
+    configure.contentInsets = UIEdgeInsetsMake(0, 20, 0, 20);
     
     self.pageTitleView = [SGPageTitleView pageTitleViewWithFrame:CGRectMake(0, pageTitleViewY, self.view.frame.size.width, 44) delegate:self titleNames:titleArr configure:configure];
     [self.view addSubview:_pageTitleView];
