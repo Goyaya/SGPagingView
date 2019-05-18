@@ -46,6 +46,7 @@
     configure.indicatorBorderColor = [UIColor lightGrayColor];
     configure.indicatorCornerRadius = 20;
     configure.indicatorHeight = 25;
+    configure.contentInsets = UIEdgeInsetsMake(0, 20, 0, 20);
     
     /// pageTitleView
     self.pageTitleView = [SGPageTitleView pageTitleViewWithFrame:CGRectMake(0, pageTitleViewY, self.view.frame.size.width / 2, 44) delegate:self titleNames:titleArr configure:configure];

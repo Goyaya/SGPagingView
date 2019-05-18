@@ -32,6 +32,7 @@
     configure.indicatorColor = [UIColor orangeColor];
     configure.titleSelectedColor = [UIColor orangeColor];
     configure.titleFont = [UIFont systemFontOfSize:11];
+    configure.contentInsets = UIEdgeInsetsMake(0, 20, 0, 20);
 
     /// pageTitleView
     CGFloat statusHeight = CGRectGetHeight([UIApplication sharedApplication].statusBarFrame);

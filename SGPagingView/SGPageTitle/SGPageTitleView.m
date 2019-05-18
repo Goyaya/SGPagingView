@@ -707,7 +707,7 @@
     
     /// 处理 SGIndicatorStyleFixed 样式
     if (self.configure.indicatorStyle == SGIndicatorStyleFixed) {
-        CGFloat btnWidth = self.SG_width / self.titleArr.count;
+        CGFloat btnWidth = _scrollView.SG_width / self.titleArr.count;
         CGFloat targetBtnMaxX = (targetBtn.tag + 1) * btnWidth;
         CGFloat originalBtnMaxX = (originalBtn.tag + 1) * btnWidth;
 
@@ -724,7 +724,7 @@
     if (self.configure.indicatorStyle == SGIndicatorStyleDynamic) {
         NSInteger originalBtnTag = originalBtn.tag;
         NSInteger targetBtnTag = targetBtn.tag;
-        CGFloat btnWidth = self.SG_width / self.titleArr.count;
+        CGFloat btnWidth = _scrollView.SG_width / self.titleArr.count;
         CGFloat targetBtnMaxX = (targetBtn.tag + 1) * btnWidth;;
         CGFloat originalBtnMaxX = (originalBtn.tag + 1) * btnWidth;
         

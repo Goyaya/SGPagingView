@@ -55,6 +55,7 @@
     SGPageTitleViewConfigure *configure = [SGPageTitleViewConfigure pageTitleViewConfigure];
     configure.indicatorAdditionalWidth = 20;
     configure.indicatorScrollStyle = SGIndicatorScrollStyleEnd;
+    configure.contentInsets = UIEdgeInsetsMake(0, 20, 0, 20);
     
     /// pageTitleView
     self.pageTitleView = [SGPageTitleView pageTitleViewWithFrame:CGRectMake(0, pageTitleViewY, self.view.frame.size.width, 44) delegate:self titleNames:titleArr configure:configure];

@@ -43,6 +43,7 @@
     configure.indicatorStyle = SGIndicatorStyleDefault;
     configure.showVerticalSeparator = YES;
     configure.verticalSeparatorReduceHeight = 24;
+    configure.contentInsets = UIEdgeInsetsMake(0, 20, 0, 20);
     
     self.pageTitleView = [SGPageTitleView pageTitleViewWithFrame:CGRectMake(0, pageTitleViewY, self.view.frame.size.width, 64) delegate:self titleNames:titleArr configure:configure];
     [self.view addSubview:_pageTitleView];

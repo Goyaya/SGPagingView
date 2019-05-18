@@ -50,6 +50,7 @@
     configure.titleTextZoomRatio = 0.5;
     configure.titleAdditionalWidth = 30;
     configure.titleGradientEffect = YES;
+    configure.contentInsets = UIEdgeInsetsMake(0, 20, 0, 20);
     
     /// pageTitleView
     self.pageTitleView = [SGPageTitleView pageTitleViewWithFrame:CGRectMake(0, pageTitleViewY, self.view.frame.size.width, 44) delegate:self titleNames:titleArr configure:configure];
