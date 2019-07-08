@@ -87,6 +87,13 @@
     return [[self alloc] initWithFrame:frame delegate:delegate titleNames:titleNames configure:configure];
 }
 
+- (UIView * _Nullable)operationViewAtIndex:(NSInteger)index {
+    if (index < self.btnMArr.count) {
+        return self.btnMArr[index];
+    }
+    return nil;
+}
+
 - (void)initialization {
     _selectedIndex = 0;
 }
